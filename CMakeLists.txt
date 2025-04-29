@@ -3,7 +3,8 @@ project(SimpleRenderer)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-set(SOURCES src/main.cpp src/glad.c)
+set(SOURCES src/main.cpp src/shader.cpp src/glad.c)
+file(COPY shaders DESTINATION ${CMAKE_BINARY_DIR})
 
 add_executable(SimpleRenderer ${SOURCES})
 target_include_directories(SimpleRenderer PRIVATE include/)
